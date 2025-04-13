@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Selamat Ulang Tahun, Sarah!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ffd0e4, #fba6cf);
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      overflow-y: auto;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #fff;
+      margin-top: 30px;
+      text-shadow: 2px 2px #ff6f61;
+      animation: pop 1s ease-in-out;
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: #ffffffee;
+      margin-top: 10px;
+      padding: 0 20px;
+    }
+
+    img {
+      width: 250px;
+      max-width: 90%;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-top: 20px;
+    }
+
+    iframe {
+      margin-top: 20px;
+      border-radius: 12px;
+      max-width: 90%;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    .balloon {
+      position: absolute;
+      width: 30px;
+      height: 40px;
+      background-color: red;
+      border-radius: 50%;
+      animation: float 6s infinite linear;
+      z-index: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) translateX(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) translateX(50px);
+        opacity: 0;
+      }
+    }
+
+    @keyframes pop {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎂 Selamat Ulang Tahun, Sayangku! "Ariq Reza Amrullah" 🎉</h1>
+  <p><strong>Terima kasih sudah hadir dalam hidupku. Di hari spesial ini, aku cuma mau kamu tahu, tak ada yang lebih aku syukuri selain bisa berbagi waktu, tawa, dan cinta bersamamu. Semoga hari ini dan seterusnya dipenuhi kebahagiaan, seperti yang selalu kamu berikan ke aku. I always love you sayangku! 💖</strong></p>
+
+  <!-- FOTO -->
+  <img src="love.jpg" alt="Foto Love" />
+
+  <!-- Embed lagu YouTube -->
+  <iframe 
+    width="300" 
+    height="170" 
+    src="https://www.youtube.com/embed/EgsHKiuikq0?autoplay=1&loop=1&playlist=EgsHKiuikq0" 
+    title="Sempurna - Lagu Romantis" 
+    frameborder="0" 
+    allow="autoplay; encrypted-media" 
+    allowfullscreen>
+  </iframe>
+
+  <!-- Balon efek -->
+  <script>
+    function createBalloon() {
+      const balloon = document.createElement('div');
+      balloon.classList.add('balloon');
+      balloon.style.left = Math.random() * 100 + 'vw';
+      balloon.style.backgroundColor = `hsl(${Math.random() * 360}, 70%, 60%)`;
+      document.body.appendChild(balloon);
+      setTimeout(() => balloon.remove(), 6000);
+    }
+
+    setInterval(createBalloon, 300);
+  </script>
+
+  <br><br>
+  <a href="penutup.html">
+    <button style="
+      background-color: #ff6b81;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      Lanjut ke halaman penutup 💌
+    </button>
+  </a>
+</body>
+</html>

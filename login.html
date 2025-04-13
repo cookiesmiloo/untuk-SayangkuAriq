@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Masuk Sayang</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffdede, #ffb6b9);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    h2 {
+      color: #ff6f61;
+      margin-bottom: 20px;
+    }
+    input {
+      margin: 10px;
+      padding: 10px;
+      width: 80%;
+      max-width: 300px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Masukkan Nama & Password ya, Sayang! 🔐</h2>
+  <input type="text" id="nama" placeholder="Nama sayangku">
+  <input type="password" id="password" placeholder="Password rahasia">
+  <button onclick="cekLogin()">Masuk</button>
+
+  <script>
+    function cekLogin() {
+      const nama = document.getElementById("nama").value.trim();
+      const pass = document.getElementById("password").value;
+
+      const namaBenar = "Ariq Reza Amrullah";
+      const passwordBenar = "081224";
+
+      if(nama === namaBenar && pass === passwordBenar) {
+        window.location.href = "halaman-utama.html";
+      } else {
+        alert("Nama atau password salah yaa 😢");
+      }
+    }
+  </script>
+</body>
+</html>
